@@ -2,21 +2,61 @@
 <head>
     <title>Calculator</title>
     <style>
+        body {
+            background-color: antiquewhite;
+        }
         h1 {
-            color: blue;
+            text-align: center;
         }
         td {
             color: blue;
             padding: 5px;
+            border: 2px solid black;
         }
         td:hover {
-            color: blueviolet;
+            background-color: wheat;
         }
+        th {
+            border: 2px solid black;
+            text-align: right;
+            padding: 10px;
+        }
+        table {
+            border: 3px solid black;
+            border-style: outset;
+            background-color: white;
+            transform: scale(1.5);
+            position: relative;
+            top: 45px;
+            padding: 5px;
+        }
+        #shadow {
+            box-shadow: 5px 5px 5px black;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        /* This is to make the heading a gradient but it isn't working
+        and I currently cannot figure out why
+        .gradient-text {
+            background-color: #CCFFFF;
+            background-image: linear-gradient(45%, #CCFFFF, #FFCCCC);
+            background-size: 100%;
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        */
     </style>
 </head>
 <main>
-    <h1>Calculator</h1>
-    <table>
+    <h1>Brad's Calculator</h1>
+    <table id="shadow" class="center">
         <thead>
             <tr>
                 <th colspan="4">Output</th>
@@ -24,33 +64,33 @@
         </thead>
         <tbody>
             <tr>
-                <td>AC</td>
-                <td>+/-</td>
-                <td>%</td>
-                <td>/</td>
+                <td><a href="#AC">AC</a></td>
+                <td><a href="#+/-">+/-</a></td>
+                <td><a href="#%">%</a></td>
+                <td><a href="#/">/</a></td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>*</td>
+                <td><a href="#7">7</a></td>
+                <td><a href="#8">8</a></td>
+                <td><a href="#9">9</a></td>
+                <td><a href="#*">*</a></td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>-</td>
+                <td><a href="#4">4</a></td>
+                <td><a href="#5">5</a></td>
+                <td><a href="#6">6</a></td>
+                <td><a href="#-">-</a></td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>+</td>
+                <td><a href="#1">1</a></td>
+                <td><a href="#2">2</a></td>
+                <td><a href="#3">3</a></td>
+                <td><a href="#+">+</a></td>
             </tr>
             <tr>
-                <td colspan="2">0</td>
-                <td>.</td>
-                <td>=</td>
+                <td colspan="2"><a href="#0">0</a></td>
+                <td><a href="#.">.</a></td>
+                <td><a href="#=">=</a></td>
             </tr>
         </tbody>
     </table>
